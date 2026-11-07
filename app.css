@@ -266,7 +266,7 @@ input[type=range]{width:100%;accent-color:var(--verde)}
 .grade2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .kpi small{font-size:12px;color:var(--mut);display:block}
 .kpi b{font:700 22px var(--fd)}
-.kpi em{font-style:normal;font-size:12px;font-weight:700;color:var(--verde-t)}
+.kpi em{display:block;font-style:normal;font-size:12px;font-weight:700;color:var(--verde-t)}
 .vazio{text-align:center;padding:48px 24px;color:var(--mut)}
 .vazio .ico{width:40px;height:40px;margin:0 auto 12px;color:var(--line)}
 .servico{display:flex;gap:14px;align-items:flex-start;background:var(--raised);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px}

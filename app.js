@@ -354,14 +354,15 @@
     <div class="pad"><div class="cartao" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;background:var(--mata);color:#fff;border:0"><div><small style="opacity:.7">Arroba do boi · ${PF.arroba.praca}</small><b style="display:block;font:700 22px var(--fd)">R$ ${PF.arroba.valor},00</b></div><span class="selo verde">+1,8% na semana</span></div></div>
     <div class="trilho" style="margin-bottom:14px">${['Todos', 'Bezerro', 'Garrote', 'Novilha', 'Vaca prenhe', 'Boi gordo', 'Touro'].map((c, i) => `<button class="chip ${i === 0 ? 'on' : ''}" data-gcat="${c}">${c}</button>`).join('')}</div>
     <div class="lista" id="lotes">${PF.gado.map(lote).join('')}</div><div style="height:16px"></div></div>${tab('inicio')}`;
+  const plural = c => ({ 'Bezerro': 'bezerros', 'Boi gordo': 'bois gordos', 'Vaca prenhe': 'vacas prenhes', 'Touro': 'touros', 'Novilha': 'novilhas', 'Garrote': 'garrotes' }[c] || c.toLowerCase());
   function lote(g) {
     const arroba = g.peso.includes('@') ? parseFloat(g.peso.replace(',', '.')) : parseInt(g.peso) / 30;
     const vsArroba = g.precoCab / arroba;
-    return `<a class="item" href="javascript:void 0" data-lote="${g.id}"><div class="ft" style="background-image:url(${img(g.foto)})"></div><div class="tx"><small>${g.cidade} · ${g.uf} · ${g.km} km da cidade</small><span class="nm">${g.qtde} ${g.categoria.toLowerCase()}s · ${g.raca}</span><strong>${reais(g.precoCab)}/cab</strong><small>${g.idade} · ${g.peso} · ${g.sexo}${g.registro !== 'Não' ? ' · ' + g.registro : ''}</small><small>≈ R$ ${Math.round(vsArroba)}/@ · lote ${mi(g.precoCab * g.qtde)}</small></div></a>`;
+    return `<a class="item" href="javascript:void 0" data-lote="${g.id}"><div class="ft" style="background-image:url(${img(g.foto)})"></div><div class="tx"><small>${g.cidade} · ${g.uf} · ${g.km} km da cidade</small><span class="nm">${g.qtde} ${plural(g.categoria)} · ${g.raca}</span><strong>${reais(g.precoCab)}/cab</strong><small>${g.idade} · ${g.peso} · ${g.sexo}${g.registro !== 'Não' ? ' · ' + g.registro : ''}</small><small>≈ R$ ${Math.round(vsArroba)}/@ · lote ${mi(g.precoCab * g.qtde)}</small></div></a>`;
   }
   function detalheLote(id) {
     const g = PF.gado.find(x => x.id === id);
-    folha(`<div style="height:180px;border-radius:var(--r-lg);background:url(${img(g.foto)}) center/cover;margin-bottom:16px"></div><h3>${g.qtde} ${g.categoria.toLowerCase()}s ${g.raca}</h3><p class="mut peq" style="margin-bottom:12px">${g.cidade}/${g.uf} · animais a ${g.km} km da cidade</p>
+    folha(`<div style="height:180px;border-radius:var(--r-lg);background:url(${img(g.foto)}) center/cover;margin-bottom:16px"></div><h3>${g.qtde} ${plural(g.categoria)} ${g.raca}</h3><p class="mut peq" style="margin-bottom:12px">${g.cidade}/${g.uf} · animais a ${g.km} km da cidade</p>
       <table class="tabela"><tr><td>Categoria</td><td>${g.categoria}</td></tr><tr><td>Idade</td><td>${g.idade}</td></tr><tr><td>Sexo</td><td>${g.sexo}</td></tr><tr><td>Quantidade</td><td>${g.qtde}</td></tr><tr><td>Peso médio</td><td>${g.peso}</td></tr><tr><td>Raça</td><td>${g.raca}</td></tr><tr><td>Registro</td><td>${g.registro}</td></tr><tr><td>Preço por cabeça</td><td>${reais(g.precoCab)}</td></tr><tr><td>Total do lote</td><td>${reais(g.precoCab * g.qtde)}</td></tr></table>
       <div style="display:flex;gap:10px;margin-top:16px"><button class="btn cont" data-fecha style="flex:1">Fechar</button><button class="btn pri" data-acao="gado-proposta" style="flex:2">Fazer proposta</button></div>`);
   }
