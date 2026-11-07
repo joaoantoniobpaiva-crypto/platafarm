@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Platafarm — 3 opções de início</title>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<style>
+:root{--g9:#06311f;--g8:#0a4a2e;--g7:#0d6b3f;--g6:#008e4f;--lima:#b5d334;--lar:#f26b3a;--txt:#13241b;--mut:#5d6f64;--line:#e3e9e5}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Figtree,sans-serif;background:#dfe7e2;color:var(--txt);padding:32px 16px}
+h1{font-family:Sora;text-align:center;font-size:22px;margin-bottom:6px}
+.sub{text-align:center;color:var(--mut);margin-bottom:28px}
+.row{display:flex;gap:36px;justify-content:center;flex-wrap:wrap}
+.col{display:flex;flex-direction:column;align-items:center;gap:12px}
+.col h2{font-family:Sora;font-size:16px}.col p{max-width:330px;text-align:center;color:var(--mut);font-size:14px}
+.phone{width:360px;height:740px;border-radius:44px;background:#fff;overflow:hidden;position:relative;box-shadow:0 30px 60px -20px rgba(6,49,31,.45),0 0 0 10px #111}
+.scroll{height:100%;overflow-y:auto;scrollbar-width:none}
+.ico{width:20px;height:20px}
+.logo{display:flex;align-items:center;gap:8px;font-family:Sora;font-weight:700;font-size:17px;letter-spacing:.5px}
+.logo img{height:22px}
+.tab{position:absolute;bottom:0;left:0;right:0;height:72px;display:flex;justify-content:space-around;align-items:center;padding-bottom:10px;font-size:11px;font-weight:600}
+.tab div{display:flex;flex-direction:column;align-items:center;gap:3px}
+/* A */
+.a .top{position:relative;height:400px;background:url(img/hero.jpg) center/cover}
+.a .top:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,49,31,.35),rgba(6,49,31,.1) 40%,rgba(6,49,31,.95))}
+.a .hd{position:absolute;z-index:2;top:46px;left:20px;right:20px;display:flex;justify-content:space-between;color:#fff}
+.a .ttl{position:absolute;z-index:2;bottom:96px;left:20px;right:20px;color:#fff}
+.a .ttl h3{font-family:Sora;font-size:30px;line-height:1.05;font-weight:700}
+.a .ttl span{color:var(--lima)}
+.a .srch{position:absolute;z-index:3;bottom:22px;left:16px;right:16px;background:#fff;border-radius:18px;padding:14px 16px;display:flex;gap:10px;align-items:center;color:var(--mut);font-size:14px;box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.a .srch b{margin-left:auto;background:var(--lima);color:var(--g9);border-radius:12px;padding:8px 10px;display:flex}
+.a .body{background:var(--g9);color:#fff;padding:18px 16px 100px}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-bottom:18px}
+.chips span{white-space:nowrap;padding:8px 14px;border-radius:99px;font-size:13px;font-weight:600}
+.a .chips span{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14)}.a .chips span.on{background:var(--lima);color:var(--g9);border-color:var(--lima)}
+.a .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px 6px;margin-bottom:22px}
+.a .grid div{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;text-align:center;line-height:1.15}
+.a .grid i{width:52px;height:52px;border-radius:18px;background:rgba(255,255,255,.07);display:grid;place-items:center;color:var(--lima)}
+.sec{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:12px}
+.sec h4{font-family:Sora;font-size:16px}.sec a{font-size:12px;color:var(--lima)}
+.rail{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none}
+.card{min-width:220px;border-radius:20px;overflow:hidden;position:relative;height:250px;background:#333 center/cover}
+.card .inf{position:absolute;left:0;right:0;bottom:0;padding:14px;background:linear-gradient(0deg,rgba(0,0,0,.85),transparent);color:#fff}
+.card small{font-size:11px;opacity:.85}.card strong{display:block;font-family:Sora;font-size:18px;margin:2px 0}
+.badge{position:absolute;top:10px;left:10px;background:var(--lar);color:#fff;font-size:10px;font-weight:700;padding:5px 9px;border-radius:99px;letter-spacing:.3px}
+.a .tab{background:rgba(6,49,31,.96);color:rgba(255,255,255,.6);border-top:1px solid rgba(255,255,255,.08)}.a .tab .on{color:var(--lima)}
+/* B */
+.b{background:#f4f7f5}
+.b .hd{padding:50px 18px 14px;display:flex;justify-content:space-between;align-items:center}
+.b .hi{padding:0 18px}.b .hi small{color:var(--mut)}.b .hi h3{font-family:Sora;font-size:24px;line-height:1.15;margin:4px 0 16px}
+.b .seg{margin:0 18px 14px;background:#fff;border-radius:16px;padding:5px;display:flex;box-shadow:0 1px 0 var(--line)}
+.b .seg span{flex:1;text-align:center;padding:10px 0;border-radius:12px;font-weight:600;font-size:13px;color:var(--mut)}.b .seg .on{background:var(--g7);color:#fff}
+.b .srch{margin:0 18px 18px;background:#fff;border-radius:16px;padding:14px;display:flex;gap:10px;color:var(--mut);font-size:14px;border:1px solid var(--line)}
+.b .tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:0 18px;margin-bottom:22px}
+.b .tile{border-radius:20px;padding:14px;height:110px;display:flex;flex-direction:column;justify-content:space-between;font-weight:700;font-family:Sora;font-size:14px;background:#fff;border:1px solid var(--line)}
+.b .tile i{color:var(--g6)}
+.b .tile.big{grid-row:span 2;height:auto;background:url(img/soja.jpg) center/cover;color:#fff;position:relative;overflow:hidden;border:0}
+.b .tile.big:before{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(6,49,31,.9),transparent 60%)}
+.b .tile.big *{position:relative}.b .tile.big i{color:var(--lima)}
+.b .tile.or{background:var(--lar);color:#fff;border:0}.b .tile.or i{color:#fff}
+.b .pad{padding:0 18px 100px}.b .sec a{color:var(--g6)}
+.b .tab{background:#fff;color:var(--mut);border-top:1px solid var(--line)}.b .tab .on{color:var(--g7)}
+/* C */
+.c .map{position:absolute;inset:0;background:url(img/cerrado.jpg) center/cover;filter:saturate(1.1)}
+.c .map:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.45),transparent 30%)}
+.c .hd{position:absolute;top:46px;left:16px;right:16px;display:flex;gap:10px;z-index:2}
+.c .hd .s{flex:1;background:#fff;border-radius:16px;padding:12px 14px;display:flex;gap:8px;color:var(--mut);font-size:13px;align-items:center}
+.c .hd .f{background:var(--g9);color:#fff;border-radius:16px;width:46px;display:grid;place-items:center}
+.pin{position:absolute;z-index:2;background:var(--g9);color:#fff;font-family:Sora;font-size:12px;font-weight:700;padding:6px 10px;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,.35)}
+.pin:after{content:"";position:absolute;left:50%;bottom:-5px;margin-left:-5px;border:5px solid transparent;border-bottom:0;border-top-color:var(--g9)}
+.pin.or{background:var(--lar)}.pin.or:after{border-top-color:var(--lar)}
+.poly{position:absolute;z-index:1;left:90px;top:200px;width:170px;height:120px;border:2.5px solid var(--lima);background:rgba(181,211,52,.18);clip-path:polygon(8% 10%,70% 0,100% 35%,88% 100%,20% 90%,0 50%);}
+.c .sheet{position:absolute;z-index:3;left:0;right:0;bottom:0;height:400px;background:#fff;border-radius:28px 28px 0 0;padding:10px 16px 90px;box-shadow:0 -10px 30px rgba(0,0,0,.25)}
+.c .grab{width:40px;height:5px;background:var(--line);border-radius:9px;margin:0 auto 14px}
+.c .chips span{background:#eef3f0;color:var(--g8)}.c .chips span.on{background:var(--g9);color:#fff}
+.c .feat{display:flex;gap:12px;align-items:center;border:1px solid var(--line);border-radius:20px;padding:10px;margin-bottom:14px}
+.c .feat .ph{width:92px;height:92px;border-radius:14px;background:url(img/soja.jpg) center/cover;flex:none}
+.c .feat small{color:var(--mut);font-size:11px}.c .feat strong{display:block;font-family:Sora;font-size:17px}
+.c .feat em{font-style:normal;font-size:11px;font-weight:700;color:var(--g6);background:#e7f4ec;padding:3px 8px;border-radius:99px}
+.c .mods{display:flex;gap:10px;overflow-x:auto;scrollbar-width:none}
+.c .mods div{min-width:92px;background:#f4f7f5;border-radius:16px;padding:12px 10px;font-size:11.5px;font-weight:600;display:flex;flex-direction:column;gap:8px;line-height:1.15}
+.c .mods i{color:var(--g6)}
+.c .tab{background:#fff;color:var(--mut);border-top:1px solid var(--line);z-index:4}.c .tab .on{color:var(--g7)}
+.rec{background:var(--lar);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:99px;margin-left:6px;vertical-align:middle}
+</style></head><body>
+<h1>Platafarm: 3 opções para a tela inicial</h1>
+<p class="sub">Arraste dentro de cada celular. As três usam o verde, o laranja e a logo do projeto original.</p>
+<div class="row">
+
+<div class="col"><h2>A · Campo aberto <span class="rec">recomendada</span></h2>
+<div class="phone a"><div class="scroll">
+ <div class="top"><div class="hd"><div class="logo"><img src="img/logo-branco.svg" alt="">PLATAFARM</div><i data-lucide="bell" class="ico"></i></div>
+  <div class="ttl"><h3>O novo jeito de<br>negociar <span>terra</span>.</h3></div>
+  <div class="srch"><i data-lucide="search" class="ico"></i>Cidade, região ou fazenda<b><i data-lucide="sliders-horizontal" class="ico"></i></b></div></div>
+ <div class="body">
+  <div class="chips"><span class="on">Fazendas</span><span>Sítios</span><span>Chácaras</span><span>Ranchos</span><span>Reservas</span></div>
+  <div class="grid">
+   <div><i data-lucide="search"></i>Quero comprar</div><div><i data-lucide="tag"></i>Quero vender</div><div><i data-lucide="handshake"></i>Quero arrendar</div><div><i data-lucide="gauge"></i>Avaliação</div>
+   <div><i data-lucide="beef"></i>Gado</div><div><i data-lucide="file-check-2"></i>Regularização</div><div><i data-lucide="landmark"></i>Financeiro</div><div><i data-lucide="flame"></i>Oportunidades</div>
+  </div>
+  <div class="sec"><h4>Certificadas</h4><a>Ver todas</a></div>
+  <div class="rail">
+   <div class="card" style="background-image:url(img/soja.jpg)"><span class="badge">CERTIFICADA</span><div class="inf"><small>Sorriso · MT · 1.575 ha</small><strong>R$ 47,2 mi</strong><small>R$ 30 mil/ha</small></div></div>
+   <div class="card" style="background-image:url(img/pasto.jpg)"><span class="badge">CERTIFICADA</span><div class="inf"><small>Uberaba · MG · 420 ha</small><strong>R$ 16,8 mi</strong><small>R$ 40 mil/ha</small></div></div>
+  </div>
+ </div></div>
+ <div class="tab"><div class="on"><i data-lucide="house" class="ico"></i>Início</div><div><i data-lucide="map" class="ico"></i>Busca</div><div><i data-lucide="message-circle" class="ico"></i>Chat</div><div><i data-lucide="user" class="ico"></i>Meu imóvel</div></div>
+</div>
+<p>Foto grande do campo, menu de módulos em verde escuro e fazendas que arrastam para o lado. É a cara de app premium.</p></div>
+
+<div class="col"><h2>B · Painel claro</h2>
+<div class="phone b"><div class="scroll">
+ <div class="hd"><div class="logo"><img src="img/logo.svg" alt="">PLATAFARM</div><i data-lucide="bell" class="ico"></i></div>
+ <div class="hi"><small>Bom dia, Antônio</small><h3>O que você quer fazer hoje?</h3></div>
+ <div class="seg"><span class="on">Comprar</span><span>Vender</span><span>Arrendar</span></div>
+ <div class="srch"><i data-lucide="search" class="ico"></i>Ex.: 500 ha soja no MT até 30 mi</div>
+ <div class="tiles">
+  <div class="tile big"><i data-lucide="map"></i><span>Ver fazendas<br>no mapa</span></div>
+  <div class="tile"><i data-lucide="gauge"></i>Quanto vale<br>minha terra?</div>
+  <div class="tile or"><i data-lucide="flame"></i>Oportunidades</div>
+  <div class="tile"><i data-lucide="beef"></i>Gado</div><div class="tile"><i data-lucide="landmark"></i>Crédito e<br>projetos</div>
+ </div>
+ <div class="pad"><div class="sec"><h4>Certificadas</h4><a>Ver todas</a></div>
+  <div class="rail"><div class="card" style="background-image:url(img/milho.jpg);height:200px"><span class="badge">CERTIFICADA</span><div class="inf"><small>Rio Verde · GO · 880 ha</small><strong>R$ 33,4 mi</strong></div></div>
+  <div class="card" style="background-image:url(img/cafe.jpg);height:200px"><div class="inf"><small>Três Pontas · MG · 160 ha</small><strong>R$ 11,2 mi</strong></div></div></div></div>
+ </div>
+ <div class="tab"><div class="on"><i data-lucide="house" class="ico"></i>Início</div><div><i data-lucide="map" class="ico"></i>Busca</div><div><i data-lucide="message-circle" class="ico"></i>Chat</div><div><i data-lucide="user" class="ico"></i>Meu imóvel</div></div>
+</div>
+<p>Claro e direto: comprar, vender ou arrendar no topo e atalhos grandes. É o mais fácil para quem não é de app.</p></div>
+
+<div class="col"><h2>C · Mapa vivo</h2>
+<div class="phone c">
+ <div class="map"></div><div class="poly"></div>
+ <div class="hd"><div class="s"><i data-lucide="search" class="ico"></i>Buscar no mapa</div><div class="f"><i data-lucide="sliders-horizontal" class="ico"></i></div></div>
+ <span class="pin" style="left:150px;top:240px">R$ 12,4 mi</span><span class="pin or" style="left:40px;top:150px">R$ 8,9 mi</span><span class="pin" style="left:250px;top:130px">R$ 21 mi</span>
+ <div class="sheet"><div class="grab"></div>
+  <div class="chips"><span class="on">Fazendas</span><span>Sítios</span><span>Arrendar</span><span>Gado</span></div>
+  <div class="feat"><div class="ph"></div><div><small>Lucas do Rio Verde · MT</small><strong>R$ 12,4 mi</strong><small>412 ha · R$ 30 mil/ha</small><br><em>12% abaixo da região</em></div></div>
+  <div class="mods"><div><i data-lucide="tag"></i>Quero vender</div><div><i data-lucide="gauge"></i>Avaliação</div><div><i data-lucide="file-check-2"></i>Regularização</div><div><i data-lucide="landmark"></i>Financeiro</div><div><i data-lucide="beef"></i>Gado</div></div>
+ </div>
+ <div class="tab"><div class="on"><i data-lucide="house" class="ico"></i>Início</div><div><i data-lucide="map" class="ico"></i>Busca</div><div><i data-lucide="message-circle" class="ico"></i>Chat</div><div><i data-lucide="user" class="ico"></i>Meu imóvel</div></div>
+</div>
+<p>A primeira coisa é o satélite com as fazendas e o contorno de cada área. Impressiona muito, mas esconde os outros módulos.</p></div>
+
+</div>
+<script>lucide.createIcons()</script>
+</body></html>

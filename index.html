@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Platafarm</title>
+<meta name="description" content="Platafarm: compra, venda e arrendamento de fazendas, com corretores parceiros.">
+<meta name="theme-color" content="#06311f">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Platafarm">
+<meta property="og:title" content="Platafarm · protótipo">
+<meta property="og:description" content="O novo jeito de negociar terra.">
+<meta property="og:image" content="img/hero.jpg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="img/logo.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/icone-180.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" rel="stylesheet">
+<link href="app.css" rel="stylesheet">
+</head>
+<body>
+<div class="palco">
+  <aside class="lado">
+    <img src="img/logo-completo.svg" alt="Platafarm">
+    <h1>O novo jeito de negociar terra.</h1>
+    <p>Protótipo da Platafarm: compra, venda e arrendamento de fazendas, gado, avaliação, regularização e crédito rural, com corretores parceiros.</p>
+    <p>Mexa no celular ao lado como se fosse o app. No seu celular, abra o mesmo link e toque em <b>Adicionar à tela de início</b>.</p>
+    <div class="qr"><div id="qr"></div><span>Aponte a câmera<br>para abrir no celular</span></div>
+    <p class="nota">Versão 1 · protótipo com dados de exemplo. Fotos geradas por IA; valores e corretores são fictícios.</p>
+  </aside>
+  <div class="aparelho">
+    <div id="app"></div>
+    <div class="splash"><img src="img/logo-branco.svg" alt=""><b>PLATAFARM</b><small>O novo jeito de negociar terra</small></div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="dados.js"></script>
+<script src="app.js"></script>
+<script>
+  try { if (window.QRCode && innerWidth > 820) new QRCode(document.getElementById('qr'), { text: location.href.split('#')[0], width: 84, height: 84, colorDark: '#06311f', colorLight: '#ffffff' }); } catch (e) {}
+</script>
+</body>
+</html>
